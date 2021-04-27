@@ -37,3 +37,6 @@ If a video sent by anyone is detected in any of the watched channels, one of the
 1) Nothing; video was parsed find and was deemed legitimate.
 2) "Crash gif detected": An anomaly in the video was detected, the message will be deleted, and the user will be kicked
 3) "*Possible* crash gif detected": The parser ran out of memory, the message will only be deleted, and the person running the bot (you) will be pinged. The user will not be kicked automatically, because there could be a legitimate reason for running out of memory, but 99% of the time it's likely just a crash gif. You can investigate on your own and kick them, but you likely need to add more memory to your system so that it will continue to auto-kick.
+
+_____
+* Thank you to u/PSOwAIDA on Reddit for providing some methods to help detect them!*
