@@ -54,7 +54,7 @@ async def on_message(msg):
         # Check embeds too
         if msg.embeds:
             for embed in msg.embeds:
-                if hasattr(embed, "video"):
+                if hasattr(embed, "video") and embed.video.url:
                     if embed.video.url.endswith("mp4"):
                         r = requests.get(embed.video.url)
                         fname = str(uuid4())
