@@ -32,6 +32,8 @@ This bot must be *self-hosted*. Due to the nature of crash gifs, it takes up a l
 8) Add a file called "token.txt" that contains the token found in step 4 on one line
 9) Run `./start.sh` to run the bot
 
+There's no "check for updates" feature, so be sure to clone this repo occasionally or check back here for updates!
+
 ## Functionality
 If a video sent by anyone is detected in any of the watched channels, one of the following things will happen:
 1) Nothing; video was parsed find and was deemed legitimate.
