@@ -94,7 +94,10 @@ async def parse(fname, msg):
             if (width, height, fmt) != first_frame_vals:
                 log.debug("Anomaly detected: ({}, {}, {}) has deviated from {}".format(width, height, fmt, first_frame_vals))
                 if fmt != first_frame_vals[2] or width > 8000 or height > 8000:
-                    await msg.delete()
+                    try:
+                        await msg.delete()
+                    except:
+                        pass
                     await msg.channel.send(":hammer: Crash gif detected. Kicking user... <@{}>".format(msg.author.id))
                     await msg.author.kick(reason="Crash gif")
                     was_bad = True
