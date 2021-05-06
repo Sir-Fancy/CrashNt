@@ -121,6 +121,8 @@ if __name__ == "__main__":
     logging.getLogger("discord").setLevel(logging.WARNING)
     logging.getLogger("websockets").setLevel(logging.WARNING)
 
+    if not os.path.exists('tmp'):
+        os.makedirs('tmp')
     try:
         bot.run(token, bot=True)
     except RuntimeError:
