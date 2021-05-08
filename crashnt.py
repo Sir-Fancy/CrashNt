@@ -93,7 +93,7 @@ async def parse(fname, msg):
                 continue
             if (width, height, fmt) != first_frame_vals:
                 log.debug("Anomaly detected: ({}, {}, {}) has deviated from {}".format(width, height, fmt, first_frame_vals))
-                if fmt != first_frame_vals[2] or width > 8000 or height > 8000:
+                if fmt != first_frame_vals[2] or int(width) > 8000 or int(height) > 8000:
                     try:
                         await msg.delete()
                     except:
